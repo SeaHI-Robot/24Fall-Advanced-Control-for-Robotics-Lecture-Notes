@@ -1,0 +1,28 @@
+title: 24Fall ACR Lecture Notes 
+tagline: Course Website
+description: 24Fall Advanced Control for Robotics - Lecture Notes 
+author: Siyuan Wang
+baseurl: '/24Fall-Advanced-Control-for-Robotics-Lecture-Notes' # the subpath of your site, e.g. /blog
+url: 'https://seahi-robot.github.io' # the base hostname & protocol for your site, e.g. http://example.com
+exclude: ["Gemfile", "Gemfile.lock", "LICENSE"]
+
+# Theme settings
+remote_theme: just-the-docs/just-the-docs@v0.9.0
+color_scheme: light
+search_enabled: true
+heading_anchors: true
+permalink: pretty
+aux_links:
+  GitHub:
+    - 'https://github.com/SeaHI-Robot/24Fall-Advanced-Control-for-Robotics-Lecture-Notes'
+footer_content:
+
+# Set a path/url to a favicon that will be displayed by the browser
+favicon_ico: "/assets/images/sustech.ico"
+
+# Enable mathjax for latex formula rendering
+math: mathjax
+
+# Enable back_to_top function, add "[Back to top](#)" at bottom in markdown file to use 
+back_to_top: true
+back_to_top_text: "Back to top"
