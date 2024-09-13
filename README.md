@@ -7,4 +7,10 @@ seo:
   name: Home
 ---
 
-# 24Fall Advanced Control for Robotics - Lecture Notes
+# Advanced Control for Robotics (ACR) -- Lecture Notes
+
+> **Time:** 24Fall
+>
+> **Instructor:** Wei Zhang, Clear Lab, SUSTech
+>
+> **Author:** Siyuan Wang, Ph.D Student at RPAI Lab, SUSTech

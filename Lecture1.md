@@ -1,6 +1,6 @@
 ---
 layout: page
-title: haha
+title: Lecture 1
 ---
 
 <details open markdown="block">
@@ -18,111 +18,167 @@ title: haha
 
 # 24Fall SDM5008 Advanced Robot Control - Lecture 1
 
-
-<!-- [TOC] -->
+<br>
 
 ## Rigid Body Configuration (Pose)
+<br>
 
 ### Basic Concepts
+<br>
 
-1. **Free Vector**
+#### **1. Free Vector**
 > Geometriic quantity with length and direction
 
+<br>
+   
 ***Notation:***
+
 $$
 v \ \text{denotes a free vactor}
 $$
+
 $$
-{}^Av \  \text{denotes a coordinate wrt frame\{A\}}
+{}^Av \  \text{denotes a coordinate w.r.t. frame\{A\}}
 $$
 
 <br>
 
-$$
-\text{Through "vector", we express "physice quantities" in different frames.}
-$$
+
+Through "vector", we express "physice quantities" in different frames.
 
 
-2. **Point**
+<br>
+
+#### **2. Point**
 > Point is NOT FREE VECTOR, a point $p$ specifies a "physical" point in space
+<br>
 
 ***Notation:***
+
 $$
 p \ \text{denotes a point in a physical space,}
 $$
+
 $$
 {}^Ap \  \text{denotes a coordinate wrt frame\{A\}}
 $$
 
+<br>
 
-3. **Cross Product**
+
+#### **3. Cross Product**
 > Not much to say, except the skew-symmetric
+<br>
 
 ***The Skew Symmetric Representation:***
 $$
 a \times b = [a]b, \ \
-where [a] = 
+where \  [a] = 
 \begin{bmatrix} 
 0 & -a_3 & a_2 \\
 a_3 & 0 & -a_1 \\
 -a_2 & a_1 & 0 \\
 \end{bmatrix}
 $$
+<br>
+
 ***The Skew Symmetric Properties:***
 - $[a] = -[a]^\top$
 - !!! $[a][b] - [b][a] = [a \times b]$ !!! ***Jacobi's identity***
 
+<br>
 
-4. **Rotation Matrix**
+#### **4. Rotation Matrix**
 > "Orthonormal(Orthogonal)"
 
+<br>
  
 
 $$
-{}^A R _B = [ {}^A \hat{x} _B, {}^A \hat{y} _B, {}^A \hat{z} _B  ]
+{}^A R _B =
+\begin{bmatrix}
+{}^A \hat{x} _B& {}^A \hat{y} _B& {}^A \hat{z} _B  
+\end{bmatrix}
 $$
+<br>
 
 ***Rotation Matrix Properties:***
 - $R^\top R = I$
 - $det(R) = 1$
 
+<br>
 
-5. **Spatial Orthogonal Group**
+#### **5. Spatial Orthogonal Group**
 > "$SO(n)$" 
+<br>
 
 ***Definition:*** 
+
 Rotation Matrices in $\mathbb{R}^n$ is defined as:
 $$
 SO(n) = { R \in \mathbb{R}^{n \times n } : R^\top R = I, det(R) = 1}
 $$
 
-$$
-{}^A R _B = [ {}^A \hat{x} _B, {}^A \hat{y} _B, {}^A \hat{z} _B  ]
-$$
 
 
 
-6. **Use of Rotation Matrix**
-- 1. Representing an Orientation
-- 2. Changing the reference frame $^A R _B$
+<br>
+
+#### **6. Use of Rotation Matrix**
+- Representing an Orientation
+- Changing the reference frame $^A R _B$
 
 $$
-\text{point } P \text{ in frame } A: p_A = [ \alpha_1 \hat x_A,\ \alpha_2 \hat x_A,\ \alpha_3 \hat x_A  ], \\
-\text{point } P \text{ in frame } B: p_B = [ \beta_1 \hat x_B,\ \beta_2 \hat x_B,\ \beta_3 \hat x_B  ]
+\text{point } P \text{ in frame } A: p_A = [ \alpha_1 \hat x_A,\ \alpha_2 \hat y_A,\ \alpha_3 \hat z_A  ], 
 $$
+
+$$
+\text{point } P \text{ in frame } B: p_B = [ \beta_1 \hat x_B,\ \beta_2 \hat y_B,\ \beta_3 \hat z_B  ]
+$$
+
 *Proof:*
+
 $$
-p_A = ^A p_A = [ \alpha_1 \ ^A \hat x_A,\ \alpha_2 \ ^A\hat x_A,\ \alpha_3 \ ^A\hat x_A  ]
+p_A = ^A p_A = 
+\begin{bmatrix}
+ \alpha_1 \ ^A \hat x_A&\ \alpha_2 \ ^A\hat y_A&\ \alpha_3 \ ^A\hat z_A   
+\end{bmatrix} = 
+\begin{bmatrix}
+\ ^A \hat x_A&\  \ ^A\hat y_A&\  \ ^A\hat z_A  
+\end{bmatrix}
+\begin{bmatrix}
+\alpha_1 \\
+\alpha_2 \\
+\alpha_3 \\
+\end{bmatrix}
 $$
 
-- 3. Rotationg a vector in a frame: $Rot(\hat\omega, \theta)$, which will be discussed later.
+$$
+^A p_B = 
+\begin{bmatrix}
+ \beta_1 \ ^A \hat x_A&\ \beta_2 \ ^A\hat y_A&\ \beta_3 \ ^A\hat z_A   
+\end{bmatrix} = 
+\begin{bmatrix}
+\ ^B \hat x_B&\  \ ^B\hat y_B&\  \ ^B\hat z_B  
+\end{bmatrix}
+\begin{bmatrix}
+\beta_1 \\
+\beta_2 \\
+\beta_3 \\
+\end{bmatrix}
+$$
 
-7. **Rigid Body Configuration (Pose)**
+- Rotationg a vector in a frame: $Rot(\hat\omega, \theta)$, which will be discussed later.
+
+<br>
+
+#### **7. Rigid Body Configuration (Pose)**
 
 - Given a (free) vector $r$:
 $$
 ^A {r} = ^A{R}_B \ ^A r \ \ \ \  \sqrt{}
 $$
+
 - Given a point $p$:
 $$
 ^B p = ^A R _B \ ^B p \ \ \ \  \times
@@ -130,12 +186,16 @@ $$
 <br>
 
 $$
-\text{Since: } \ \ ^A p = ^A( \vec{O_A P_A} ), ^B p = ^B( \vec{O_A P_B} ), \\\\
+\text{Since: } \ \ ^A p = ^A( \vec{O_A P_A} ), ^B p = ^B( \vec{O_A P_B} ), \\
+$$
+
+$$
 ^A p = ^A( \overrightarrow{O_A P_A} ) = ^A ( \overrightarrow{O_A O_B} + \overrightarrow{O_B P_B} ) = ^A O _B + ^A R _B ^B p  \ \ \ \ \sqrt{}
 $$
 
+<br>
 
-8. **Homogeneous Transformation**
+#### **8. Homogeneous Transformation**
 \\ TODO
 $$
 ^A T _B = blabla
@@ -147,6 +207,8 @@ We use ~ to express a homogeneous expression of a vector in $SO(3)$
 
 ***QUIZ:***
 *Prove that $^A T _B = ^A T _C \  ^C T _B.$*
+
+<br>
 
 ## Rigid Body Velocity (Twist)
 > 用旋量来描述刚体速度，可以实现coordinate-free。

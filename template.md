@@ -1,6 +1,7 @@
 ---
 layout: page
 title: haha
+nav_exclude: true
 ---
 
 <details open markdown="block">
