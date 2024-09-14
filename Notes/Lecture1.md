@@ -61,7 +61,7 @@ p \ \text{denotes a point in a physical space,}
 $$
 
 $$
-{}^Ap \  \text{denotes a coordinate wrt frame\{A\}}
+{}^Ap \  \text{denotes a coordinate w.r.t. frame\{A\}}
 $$
 
 <br>
@@ -352,9 +352,11 @@ $$
 \text{A rigid body with } \nu_r = (\omega, v_r) \text{ can be "thought of" as translationg at } v_r, 
 $$
 
+<center>
 $$
 \text{ while rotating with augular velocity } \omega \text{ about an axis passing through } r
 $$
+</center>
 <br>
 
 #### Spatial Velocity Representation in a Reference Frame
