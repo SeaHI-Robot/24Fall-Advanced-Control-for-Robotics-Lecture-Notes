@@ -1,6 +1,6 @@
 ---
 layout: page
-title: haha
+title: Template
 nav_exclude: true
 ---
 
@@ -15,21 +15,26 @@ nav_exclude: true
 
 </details>
 
+
+
+
+<!-- !!! Write Inside !!! -->
 # Heading 1
 
 
-## Latex Rendering 
-
-$$
-\begin{equation}
-\int_0^x \sin(x) dx
-\end{equation}
-$$
+## Heading 2
 
 
-## **Image Captions**
+### Heading 3
 
-![123](https://raw.githubusercontent.com/atom-community/markdown-preview-plus/master/imgs/mpp-full-res-invert.png)
+
+#### Heading 4
+{: .fs-4 }
+
+
+<!-- !!! Write Inside !!! -->
+
+
 
 
 [Back to Top](#)
