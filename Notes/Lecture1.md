@@ -379,6 +379,25 @@ $$
 
 <br>
 
+#### Spatial Velocity (Twist) Transformation
+{: .fs-4 }
+
+<br>
+
+$$
+\text{For twist in frame } A \text{ and frame B, there relationshaip is connected by:}  
+\\
+
+{}^A\nu = ^A X _B \ ^B\nu, \\
+
+where \ ^AX_B = \begin{bmatrix}
+^A R _B & 0  \\
+[^Ap_B]^A R _B & ^A R _B  \\
+\end{bmatrix} 
+
+$$
+
+<br>
 ---
 **Not Finished Yet**
 
