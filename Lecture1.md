@@ -16,7 +16,7 @@ title: Lecture 1
 
 
 
-# 24Fall SDM5008 Advanced Robot Control - Lecture 1
+# Lecture 1
 
 <br>
 
@@ -135,7 +135,7 @@ $$
 - Changing the reference frame $^A R _B$
 
 
-*Proof:*
+***Proof:***
 
 $$
 \text{point } P \text{ in frame } A: 
@@ -225,17 +225,20 @@ $$
 We use ~ to express a homogeneous expression of a vector in $SO(3)$
 
 **e.g.** 
-$\vec v =
+
+$$
+\vec p =
 \begin{bmatrix}
 a   \\
 b  \\
 c  \\
-\end{bmatrix}$, $\tilde{v} = \begin{bmatrix}
+\end{bmatrix}, \ \tilde{p} = \begin{bmatrix}
 a   \\
 b  \\
 c  \\
-0  \\
-\end{bmatrix}$ 
+1  \\
+\end{bmatrix}
+$$ 
 
 <br>
 <br>
@@ -284,7 +287,7 @@ v_{p_i} = v_{q} + \vec{\omega} \times \overrightarrow{q p_i}
 $$
 
 
-*Proof:*
+***Proof:***
 
 By using $p_0$ above as an intermediate variable:
 
@@ -335,12 +338,12 @@ $$
 
 ### **Spatial Velocity (Twist)**
 {: .fs-6}
-> After the above derivation, defefine spatial velocity (Twist)
+> After the above derivation, define spatial velocity (Twist)
 
 <br>
 
 $$
-\nu_r = (\omega, v_r), \nu_r \in \mathbb{R}^6
+\nu_r = [\omega, v_r]^\top, \nu_r \in \mathbb{R}^6
 $$
 
 #### An Interpretation
@@ -349,7 +352,7 @@ $$
 <br>
 
 $$
-\text{A rigid body with } \nu_r = (\omega, v_r) \text{ can be "thought of" as translationg at } v_r, 
+\text{A rigid body with } \nu_r = [\omega, v_r]^\top \text{ can be "thought of" as translation at } v_r, 
 $$
 
 <center>
@@ -359,7 +362,7 @@ $$
 </center>
 <br>
 
-#### Spatial Velocity Representation in a Reference Frame
+#### Spatial Velocity Representation (in a Reference Frame)
 {: .fs-4 }
 > Some Notations (**!!! Important !!!**)
 
@@ -367,17 +370,96 @@ $$
 
 - Given frame $\{A\}$ and a spatial velocity $\nu$
 
-- Choose $o_A$, the origin of frame $\{A\}$ as a reference point
+- Choose $O_A$, the origin of frame $\{A\}$ as a reference point
 
 - Coordinates of $\nu$ in frame $\{A\}$:
 
 $$
-{}^A \nu_{o_A} = ( {}^A \omega, {}^A v _{o_A} )
+{}^A \nu_{O_A} = [ {}^A \omega, {}^A v _{O_A} ] ^ \top
 $$
 
-- By default, we assume the origin of the frame is used as the reference point: ${}^A \nu = {}^A \nu_{o_A}$ 
+- By default (for the notiation), we assume the origin of the frame is used as the reference point: ${}^A \nu = {}^A \nu_{o_A}$ , ${}^A v = {}^A v_{O_A}$
 
 <br>
+
+#### Spatial Velocity (Twist) Transformation
+{: .fs-4 }
+
+<br>
+
+$$
+\text{For twist in frame } A \text{ and frame B, there relationshaip is connected by:}  
+$$
+
+$$
+
+{}^A\nu = ^A X _B \ ^B\nu, \ \ \ \
+
+where \ ^AX_B = \begin{bmatrix}
+^A R _B & 0  \\
+[^AO_B]^A R _B & ^A R _B  \\
+\end{bmatrix} 
+$$
+
+
+
+
+***Proof:***
+
+Let's say we want to express $\nu_A$ with $\nu_B$, define the transformation matrix $^AX_B$:
+
+$$
+\nu_A = ^AX_B \nu_B
+$$
+
+- **For the angular velocity**:
+
+$$
+^A\omega = ^A R_B ^B \omega
+$$
+
+- **For the linear velocity**:
+
+Imagin frame {$A$} and frame {$B$}, we have the "Physics":
+
+$$
+\text{"Physicss":  }v_{O_A} = v_{O_B} + \omega \times \overrightarrow{O_B O_A}
+$$
+
+In frame {$A$}:
+
+$$
+^Av_{O_A} = ^Av_{O_B} + ^A\omega \times (- ^A O _B)
+$$
+
+$$
+\longrightarrow {^Av_{O_A} = ^AR_B ^Bv_{O_B} + ^AR_B^B\omega \times (- ^A O _B)}
+$$
+
+$$
+\longrightarrow {^Av_{O_A} = ^AR_B ^Bv_{O_B} +  ^A O _B \times ^AR_B^B\omega}
+$$
+
+- **Combine angular and linear velocity together (Twist):** 
+
+$$
+^A\omega = ^A R_B ^B \omega, \text{where } ^AX_B = \begin{bmatrix}
+^A R _B & 0  \\
+[^AO_B]^A R _B & ^A R _B  \\
+\end{bmatrix} 
+
+$$
+
+
+<br>
+
+## Screw Motion (Geometric Aspect)
+{: .fs-7}
+<br>
+
+
+
+[Check Lecture Slides about Screw Motion](https://seahi-robot.github.io/24Fall-Advanced-Control-for-Robotics-Lecture-Notes/assets/LN1_RigidBodyMotion.pdf)
 
 ---
 **Not Finished Yet**
