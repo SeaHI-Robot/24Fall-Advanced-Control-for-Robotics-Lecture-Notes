@@ -459,7 +459,7 @@ $$
 
 
 
-[Check Lecture Slides about Screw Motion](https://seahi-robot.github.io/24Fall-Advanced-Control-for-Robotics-Lecture-Notes/assets/LN1_RigidBodyMotion.pdf)
+[Check Lecture Slides about Screw Motion: Page 26](https://seahi-robot.github.io/24Fall-Advanced-Control-for-Robotics-Lecture-Notes/assets/LN1_RigidBodyMotion.pdf)
 
 ---
 **Not Finished Yet**
