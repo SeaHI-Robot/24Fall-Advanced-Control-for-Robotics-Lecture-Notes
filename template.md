@@ -4,6 +4,9 @@ title: Lecture 0
 nav_exclude: true
 ---
 
+# Lecture 0
+<br>
+
 <details open markdown="block">
   <summary>
     Table of contents
@@ -15,16 +18,12 @@ nav_exclude: true
 
 </details>
 
-
-
-# Lecture 0
-
+---
 <br>
 
 ## Matrix Exponential
 {: .fs-7}
 <br>
-
 
 ### **1. What is the "Euler's Number" $e$ ?**
 {: .fs-6}
@@ -104,7 +103,8 @@ $$
 
 
 <br>
+
 <br>
 
-
+---
 [Back to Top](#)

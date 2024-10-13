@@ -3,6 +3,9 @@ layout: page
 title: Lecture 1
 ---
 
+# Lecture 1
+<br>
+
 <details open markdown="block">
   <summary>
     Table of contents
@@ -14,10 +17,7 @@ title: Lecture 1
 
 </details>
 
-
-
-# Lecture 1
-
+--- 
 <br>
 
 ## Rigid Body Configuration (Pose)
@@ -250,7 +250,6 @@ $$
 
 <br>
 
----
 <br>
 
 ## Rigid Body Velocity (Twist)
@@ -453,20 +452,15 @@ $$
 
 <br>
 
-## **Screw** Motion (Geometric Aspect)
+## **Screw Motion (Geometric Aspect)**
 {: .fs-7}
+> [Check Lecture Slides about Screw Motion: Page 26](https://seahi-robot.github.io/24Fall-Advanced-Control-for-Robotics-Lecture-Notes/assets/LN1_RigidBodyMotion.pdf)
+
 <br>
 
-
-
-[Check Lecture Slides about Screw Motion: Page 26](https://seahi-robot.github.io/24Fall-Advanced-Control-for-Robotics-Lecture-Notes/assets/LN1_RigidBodyMotion.pdf)
+<br>
 
 ---
-**Not Finished Yet**
-
-
-<br>
-<br>
 
 
 [Back to Top](#)

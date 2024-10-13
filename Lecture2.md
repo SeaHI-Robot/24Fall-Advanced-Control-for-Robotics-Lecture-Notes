@@ -3,6 +3,9 @@ layout: page
 title: Lecture 2
 ---
 
+# Lecture 2
+<br>
+
 <details open markdown="block">
   <summary>
     Table of contents
@@ -14,10 +17,7 @@ title: Lecture 2
 
 </details>
 
-
-
-# Lecture 2
-
+---
 <br>
 
 ## Matrix Exponential
