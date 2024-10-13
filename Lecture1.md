@@ -453,7 +453,7 @@ $$
 
 <br>
 
-## Screw Motion (Geometric Aspect)
+## **Screw** Motion (Geometric Aspect)
 {: .fs-7}
 <br>
 
