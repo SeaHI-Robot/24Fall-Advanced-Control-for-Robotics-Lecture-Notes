@@ -18,3 +18,12 @@ seo:
 > - **Instructor:** Wei Zhang, Clear Lab, SUSTech
 >
 > - **Lecture Note Author:** Siyuan Wang, Ph.D Student at RPAI Lab, SUSTech
+
+---
+
+<h1><strong><em>This website will be no longer maintained!</em></strong></h1>
+
+<h2><strong><em>The author has no time to document the detailed notes about this course anymore!</em></strong></h2>
+
+---
+

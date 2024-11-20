@@ -82,11 +82,11 @@ $$
 
 - $Ae^{A}= e^{A}A$
 
-- $e^{A}e^{B}= e^{A+ B}$if$AB=BA$
+- $e^{A}e^{B}= e^{A+ B}$ if $AB=BA$
 
 - If $A=PDP^{-1}$, then $e^A=Pe^DP^{-1}$
 
-- For every $t,\tau\in\mathbb{R},e^Ate^{A\tau}=e^{A(t+\tau)}$
+- For every $t,\tau\in\mathbb{R},e^{At}e^{A\tau}=e^{A(t+\tau)}$
 
 - $\left ( e^A\right ) ^{- 1}= e^{- A}$
 
@@ -121,6 +121,8 @@ $$
 ## **Rotation Operation via Differential Equation**
 {: .fs-7}
 > For a rotation process, it can be expressed as an ODE: $\dot{p}(t)=\hat{\omega}\times p(t)=[\hat{\omega}]p(t),\text{with }p(0)=p_0$, solution: $p(t)=e^{[\hat{\omega}]t}p_{0}$ 
+>
+> "A rotation can be thought as a motion (ODE)"
 
 <br>
 
@@ -135,13 +137,18 @@ $$
 
 <center>
 $$
-\begin{array}{l}\text{Every rotation matrix }R\text{ can be written as}R=\mathrm{Rot}(\hat{\omega},\theta)\triangleq e^{[\hat{\omega}]\theta}\text{,i.e.,it}\\\text{represents a rotation operation about }\hat{\omega}\text{ by } \theta.\end{array}
+\begin{array}{l}\text{Every rotation matrix }R\text{ can be written as }R=\mathrm{Rot}(\hat{\omega},\theta)\triangleq e^{[\hat{\omega}]\theta}\text{,i.e.,it}\\\text{represents a rotation operation about }\hat{\omega}\text{ by } \theta.\end{array}
 $$
 </center>
 
-
-
 <br>
+
+<center>
+$$
+ R= e^{[\hat{\omega}]\theta} \in SO(3) \text{, } \omega \in so(3) \\
+$$
+</center>
+
 
 <br>
 ---
